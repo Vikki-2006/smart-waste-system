@@ -1,67 +1,43 @@
 # Smart Waste Collection System
 
-An IoT-based Smart Waste Collection System with AI prediction and route optimization.
+A complete IoT and AI-powered Smart Waste Management system built with Python Flask, Scikit-learn, SQLite, and vanilla HTML/CSS/JS.
 
-## 📌 Project Overview
-This project aims to improve urban waste management using IoT sensors and Artificial Intelligence. Waste bins are monitored in real time, and when bins reach a certain threshold, an optimized collection route is generated for garbage trucks.
+## Features
+- **IoT Simulation**: Real-time interval updates to simulate connected bins.
+- **Machine Learning**: Random Forest model to predict future overflow scenarios.
+- **Route Optimization**: Dijkstra-based graph algorithm to calculate fastest waste collection paths.
+- **Dashboard API**: Flask REST APIs providing all backend telemetry.
+- **Web Interface**: Modern dark-themed, dashboard featuring live tables and charts.
 
-The system reduces unnecessary travel, saves fuel, and prevents waste overflow.
+## Setup Instructions
 
-## ⚙️ Technologies Used
-- Python (Flask)
-- Machine Learning (Random Forest)
-- SQLite Database
-- HTML, CSS, JavaScript
-- Chart.js
-- IoT Sensor Data Simulation
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 🧠 Algorithms Used
-- Random Forest Classifier – for predicting bin overflow
-- Dijkstra Algorithm – for route optimization
+2. **Generate Initial ML Data**
+   ```bash
+   cd dataset
+   python generate_data.py
+   ```
+   *(This generated `waste_data.csv` used for ML model training.)*
 
-## 🗂 Project Structure
-smart-waste-system
-│
-├── backend
-│ ├── app.py
-│ ├── database.py
-│ ├── model.py
-│ ├── route_optimizer.py
+3. **Run the Backend Application**
+   ```bash
+   cd backend
+   python app.py
+   ```
+   *(This also initializes the SQLite DB and performs an initial training of the ML model if the data exists.)*
 
-├── frontend
-│ ├── index.html
-│ ├── dashboard.js
-│ ├── style.css
+4. **Access the System**
+   Open your browser and navigate to:
+   [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-├── dataset
-│ └── waste_data.csv
-
-├── requirements.txt
-└── README.md
-## 🚀 How to Run the Project
-
-1. Install dependencies
-pip install -r requirements.txt
-
-2. Run the backend server
-cd backend
-python app.py
-
-4. Open the frontend
-Open `frontend/index.html` in a browser.
-
-## 📊 Features
-- Real-time bin fill level monitoring
-- Overflow prediction using Machine Learning
-- Optimized waste collection route
-- Dashboard visualization of bin status
-- Reduced fuel consumption and travel time
-
- ## 📷 Project Screenshot
-
-<img width="2560" height="1440" alt="Screenshot (412)" src="https://github.com/user-attachments/assets/b64a9cd4-de09-4b78-8377-0ce0d6b71e16" />
-<img width="2560" height="1440" alt="Screenshot (413)" src="https://github.com/user-attachments/assets/d31093b9-ef62-45ac-b78c-3768b25bb363" />
-<img width="2560" height="1440" alt="Screenshot (414)" src="https://github.com/user-attachments/assets/fb491991-ed5c-4411-a2e3-072fd3fcd05d" />
-
-
-
+## Project Structure
+- `backend/app.py`: Main Flask application router.
+- `backend/database.py`: SQLite connection and models.
+- `backend/model.py`: Scikit-learn Random Forest model config.
+- `backend/route_optimizer.py`: Routing algorithm.
+- `frontend/`: Web application HTML, CSS, & JS.
+- `dataset/`: Training synthetic data generation script.

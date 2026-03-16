@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Optimizer | Smart Waste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <h2>SmartWaste.AI</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li class="active"><a href="route.html"><i class="fa-solid fa-truck-fast"></i> Route Optimizer</a></li>
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header>
+            <div class="header-title">
+                <h1>AI Route Optimizer</h1>
+                <p>Smart path generation via Dijkstra for critical bins</p>
+            </div>
+            <div class="header-actions">
+                <button id="optimizeBtn" class="premium-btn primary-gradient"><i class="fa-solid fa-route"></i> Generate Optimal Route</button>
+            </div>
+        </header>
+
+        <section class="main-panel dual-panel">
+            <div class="card route-list-card">
+                <div class="card-header">
+                    <h3>Optimal Path</h3>
+                    <span id="routeDistance" class="badge">Distance: -</span>
+                </div>
+                <div class="route-container" id="routeContainer">
+                    <p class="empty-state">Click 'Generate Optimal Route' to calculate the fastest path considering bins > 80% fill level.</p>
+                </div>
+            </div>
+            
+            <div class="card map-illustration-card">
+                <div class="card-header">
+                    <h3>Route Map (Conceptual)</h3>
+                </div>
+                <!-- Interactive generic representation -->
+                <div class="map-mockup" id="mapMockup">
+                    <div class="dot depot" style="top: 50%; left: 50%;"></div>
+                    <p class="map-placeholder">Simulated Network Map</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

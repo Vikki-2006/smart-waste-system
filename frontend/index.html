@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Dashboard</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <h2>SmartWaste.AI</h2>
+        </div>
+        <ul class="nav-links">
+            <li class="active"><a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="route.html"><i class="fa-solid fa-truck-fast"></i> Route Optimizer</a></li>
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header>
+            <div class="header-title">
+                <h1>Overview Dashboard</h1>
+                <p>Real-time IoT Monitor</p>
+            </div>
+            <div class="header-actions">
+                <button id="refreshBtn" class="premium-btn"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+            </div>
+        </header>
+
+        <section class="kpi-cards">
+            <div class="card kpi-card">
+                <div class="kpi-icon total"><i class="fa-solid fa-trash-can"></i></div>
+                <div class="kpi-info">
+                    <p>Total Bins</p>
+                    <h3 id="totalBins">-</h3>
+                </div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-icon critical"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="kpi-info">
+                    <p>Critical / Overflow</p>
+                    <h3 id="criticalBins">-</h3>
+                </div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-icon normal"><i class="fa-solid fa-check"></i></div>
+                <div class="kpi-info">
+                    <p>Normal Bins</p>
+                    <h3 id="normalBins">-</h3>
+                </div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-icon pred"><i class="fa-solid fa-brain"></i></div>
+                <div class="kpi-info">
+                    <p>Predicted Alerts</p>
+                    <h3 id="predictedBins">-</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-panel">
+            <div class="card table-card">
+                <div class="card-header">
+                    <h3>IoT Bin Status</h3>
+                </div>
+                <div class="table-container">
+                    <table id="binsTable">
+                        <thead>
+                            <tr>
+                                <th>Bin ID</th>
+                                <th>Location</th>
+                                <th>Fill Level</th>
+                                <th>Status</th>
+                                <th>AI Prediction</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody id="binsList">
+                            <!-- Rows will be populated by JS -->
+                            <tr><td colspan="6" class="table-loading">Loading sensors data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
