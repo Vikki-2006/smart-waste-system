@@ -71,5 +71,5 @@ Open `frontend/index.html` in browser.
 <img width="2560" height="1440" alt="Screenshot (413)" src="https://github.com/user-attachments/assets/e941db6e-1d78-4234-8bad-95c8a29cb5d7" />
 <img width="2560" height="1440" alt="Screenshot (414)" src="https://github.com/user-attachments/assets/e620d1ec-6a83-4649-9431-e18e8c949e04" />
 
-
+---
 
