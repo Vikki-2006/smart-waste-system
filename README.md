@@ -1,4 +1,4 @@
-# Smart Waste Collection System      
+# Smart Waste Collection System       fewfwefwefwefwefwef
 
 ## 📌 Project Overview
 This project implements an IoT-based Smart Waste Collection System that monitors bin fill levels and optimizes garbage collection routes using Artificial Intelligence and route optimization algorithms.
