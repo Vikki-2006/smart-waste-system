@@ -1,4 +1,4 @@
-wwwwwwwwwwwwwwwwwwwwwwww
+
 
 
 # Smart Waste Collection System    
