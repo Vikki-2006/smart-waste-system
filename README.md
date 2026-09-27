@@ -6,9 +6,6 @@
 
 
 
-
-
-
 # Smart Waste Collection System    
 
 ## 📌 Project Overview
